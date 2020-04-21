@@ -1,0 +1,68 @@
+button {
+    color: white;
+    font-size: 50px;
+    font-family: 'Caesar Dressing';
+    border: none;
+    width: 20%;
+    background-color: transparent;
+}
+
+button:hover {
+    box-shadow: 5px 5px 5px 5px;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/76/ec/a8/76eca8e9e408283e32823b736e19c966.gif');
+    background-size: cover;
+}   
+
+#menubar{ 
+    border: 3px solid lightblue;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+#me {
+    color: black;
+    font-size: 30px;
+    font-family: 'Caesar Dressing';
+    border: none;
+    width: 25%;
+    background-color: rgb(226, 219, 219); opacity: 0.8;
+    border-radius: 12px;
+}
+
+#home {
+    border: 3px solid rgb(214, 173, 230);
+    position: relative;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+#hometxt {
+    color: black;
+    font-size: 50px;
+    font-family: 'Trade Winds';
+    width: 100%;
+    display: inline-block;
+}
+
+span {
+    font-size: 75px;
+  }
+
+#hometext {
+    border: 3px solid lightblue;
+    position: relative;
+    top: 225px;
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    height: fit-content;
+    background-color: rgb(252, 249, 249, 0.45); 
+}

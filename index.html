@@ -1,12 +1,97 @@
 <html>
-    <body>
-        <h1>
-           My First Page
-           SLEEPY
-        </h1>
-        <p>
-            About Me
-        </p>
-    </body>
-   
+
+<style>
+ 
+    button {
+        color: white;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        border: none;
+        width: 20%;
+        background-color: transparent;
+    }
+
+    body {
+        background-image: url('https://i.pinimg.com/originals/76/ec/a8/76eca8e9e408283e32823b736e19c966.gif');
+        background-size: cover;
+    }   
+
+    #menubar{ 
+        border: 3px solid lightblue;
+        position: absolute;
+        top: 20px;
+        width: 95%;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #me {
+        color: black;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        border: none;
+        width: 25%;
+        background-color: rgb(226, 219, 219); opacity: 0.8;
+    }
+
+    #home {
+        border: 3px solid rgb(214, 173, 230);
+        position: relative;
+        top: 150px;
+        width: 95%;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #hometxt {
+        color: white;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        display: inline-block;
+    }
+
+    #hometext {
+        border: 3px solid lightblue;
+        position: relative;
+        top: 225px;
+        width: 95%;
+        text-align: center;
+        background-color: transparent;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+<div id="menubar">  
+    <button onclick="home()">Home</button>
+    <button>About</button>
+    <button>Projects</button>
+    <button>Contact</button>
+</div>
+
+<div id="home"> 
+    <button id="me"; onclick=web()>My Website</button>
+    <button id="me"; onclick=who()>Who Am I?</button>
+</div>
+
+<div id="hometext">
+    <p id="hometxt">Hello!</p>
+</div>
+
+<script>
+    function web(params) {
+        document.getElementById('hometxt').innerHTML = "Welcome to my website!<br>Here, you'll find more about me. Be sure to click through to learn more!"
+    }
+    function who(params) {
+        document.getElementById('hometxt').innerHTML = "My name is Audry!<br>I'm an eleventh grade student who likes coding.<br>This is my first webite."
+    }
+    function home(params) {
+        document.getElementById('hometxt').innerHTML = "Hello!"
+    }
+</script>
+
+</body>
+
 </html>

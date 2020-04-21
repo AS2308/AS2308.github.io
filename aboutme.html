@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Trade Winds' rel='stylesheet'>
+    </head>
+<body>
+
+<div id="menubar">  
+    <button id="h"; onclick="home()">Home</button>
+    <button>About</button>
+    <button>Projects</button>
+    <button>Contact</button>
+</div>
+
+<div id="home"> 
+    <button id="me"; onclick=web()>My Website</button>
+    <button id="me"; onclick=who()>Who Am I?</button>
+</div>
+
+<div id="hometext">
+    <p id="hometxt">Hello!<br><span>&#128075;&#127998;</span></p>
+</div>
+
+<script>
+    function web(params) {
+        document.getElementById('hometxt').innerHTML = "Welcome to my website!<br>Here, you'll find more about me. Be sure to click through to learn more!"
+    }
+    function who(params) {
+        document.getElementById('hometxt').innerHTML = "My name is Audry!<br>I'm an eleventh grade student who likes coding.<br>This is my first website."
+    }
+    function home(params) {
+        document.getElementById('hometxt').innerHTML = "Hello!<br><span>&#128075;&#127998;</span>"
+    }
+</script>
+
+</body>
+
+</html>
