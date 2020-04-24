@@ -1,0 +1,47 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 40px;
+    font-family: cursive;
+    padding: 5px;
+}
+
+td {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+}
+
+table {
+    border-spacing: 5px;
+    opacity: 0.8;
+}
+
+table#dogs {
+    background-color: white;
+    position: sticky;
+}
+
+button {
+    font-size: 40px;
+    font-family: cursive;
+    border-radius: 12px;
+}
+
+#chart {
+    position: absolute;
+    position: fixed;
+    top: 20%;
+    left: 18.5%;
+    z-index: 1;
+}
+
+img {
+    width: 50%;
+    height: 150%;
+    position: relative;
+    z-index: -1;
+}

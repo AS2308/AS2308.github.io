@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="tables.css">
+</head>
+
+<div id="images">
+    <img id='ottoman' src="file:///Users/audrysurendra/Downloads/ottoman.JPG">
+    <img id="stairs" src="file:///Users/audrysurendra/Downloads/chair.JPG"; style="float: right;">
+</div>
+
+<div id="chart">
+    <table id="dogs"; style="width: 100%;">
+        <caption><button onclick="Both()" id="mydogs"; style="border-color: transparent; background-color: burlywood;">My Dogs</button></caption>
+        <tr>
+            <th> </th>
+            <th>Age</th>
+            <th>Breed</th>
+            <th colspan="2">Colours</th>
+        </tr>
+        <tr>
+            <th><button onclick="Angel()">Angel</button></th>
+            <td>8 Years</td>
+            <td>Havanese</td>
+            <td>Black</td>
+            <td>White</td>
+        </tr>
+        <tr>
+            <th><button onclick="Mousse()">Mousse</button></th>
+            <td>5 Months</td>
+            <td>Havanese x Poodle</td>
+            <td>Brown</td>
+            <td>White</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function Angel(params) {
+        document.getElementById('ottoman').src= "file:///Users/audrysurendra/Downloads/cowgirl.JPG"
+        document.getElementById('stairs').src= "file:///Users/audrysurendra/Downloads/brows.JPG"
+    }
+
+    function Mousse(params) {
+        document.getElementById('ottoman').src= "file:///Users/audrysurendra/Downloads/sleepy.JPG"
+        document.getElementById('stairs').src= "file:///Users/audrysurendra/Downloads/silly.JPG"
+    }
+
+    function Both(params) {
+        document.getElementById('ottoman').src= "file:///Users/audrysurendra/Downloads/ottoman.JPG"
+        document.getElementById('stairs').src= "file:///Users/audrysurendra/Downloads/chair.JPG"
+    }
+</script>
+
+</html>

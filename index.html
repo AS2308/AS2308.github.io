@@ -15,8 +15,8 @@
 </div>
 
 <div id="home"> 
-    <button id="me"; onclick=web()>My Website</button>
-    <button id="me"; onclick=who()>Who Am I?</button>
+    <button id="me"; onclick='var x=3; web()'>My Website</button>
+    <button id="me"; onclick='who()'>Who Am I?</button>
 </div>
 
 <div id="hometext">
@@ -25,7 +25,7 @@
 
 <script>
     function web(params) {
-        document.getElementById('hometxt').innerHTML = "Welcome to my website!<br>Here, you'll find more about me. Be sure to click through to learn more!"
+        document.getElementById('hometxt').innerHTML="Welcome to my website!<br>Here, you'll find more about me. Be sure to click through to learn more!"
     }
     function who(params) {
         document.getElementById('hometxt').innerHTML = "My name is Audry!<br>I'm an eleventh grade student who likes coding.<br>This is my first website."
