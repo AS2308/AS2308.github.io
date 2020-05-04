@@ -45,3 +45,8 @@ img {
     position: relative;
     z-index: -1;
 }
+
+#dogs {
+    position: absolute;
+    margin-top: 0px;
+}
