@@ -109,10 +109,10 @@ var webs = [
 ]
 
 function sunny() {
-    x = prompt("Do you need sunscreen? ", "Yes or No")
+    x = prompt("Do you need sunscreen? ", "yes or no")
     //asks if they need sunscreen to signify advice or protection
     if (x == "yes") {
-        y = prompt("Would you like us to provide you with some?", "Yes or No")
+        y = prompt("Would you like us to provide you with some?", "yes or no")
         if (y== "yes") {
             window.location.assign(webs[0]);
         }
@@ -125,10 +125,10 @@ function sunny() {
 }
 
 function cloudy() {
-    x = prompt("Is it starting to look cloudy? ", "Yes, No, Maybe")
+    x = prompt("Is it starting to look cloudy? ", "yes, no, maybe")
     //asks if it looks cloudy to signify whether the user is starting to see a problem
     if (x == "yes" || "maybe") {
-        var y = prompt("Do you want some advice for cloudy weather? ", "Yes or No");
+        var y = prompt("Do you want some advice for cloudy weather? ", "yes or no");
         if (y== "yes") {
             window.location.assign(webs[1]);
         }
@@ -141,10 +141,10 @@ function cloudy() {
 }
 
 function rainy() {
-    x = prompt("Does it look like it's going to rain? ", "Yes, No, Maybe")
+    x = prompt("Does it look like it's going to rain? ", "yes, no, maybe")
     //asks if it's going to rain to signify whether there will be a need for advice in the case that it does
     if (x=="yes" || x=="maybe") {
-        y= prompt("Do you want an umbrella for later? ", "Yes or No");
+        y= prompt("Do you want an umbrella for later? ", "yes or no");
         if (y=="yes") {
             window.location.assign(webs[2]);
         }
@@ -158,15 +158,15 @@ function rainy() {
 }
 
 function stormy() {
-    x = prompt("Is there a storm? ", "Yes or No")
+    x = prompt("Is there a storm? ", "yes or no")
     //asks if there's a storm to signify whether their abuser is getting violet and if they're in danger
     if (x=="yes") {
-        y = prompt("Do you think you'll be hit by lightning? ", "Yes, No, Maybe");
+        y = prompt("Do you think you'll be hit by lightning? ", "yes, no, maybe");
         if (y=="yes") {
             window.location.assign(webs[3]);
         }
         else if (y=="maybe") {
-            let z = prompt("Would you still like to take shelter?", "Yes, No")
+            let z = prompt("Would you still like to take shelter?", "yes, no")
             if (z=="yes") {
                 window.location.assign(webs[3]);
             }
@@ -181,10 +181,10 @@ function stormy() {
 }
 
 function snowy() {
-    x = prompt("Is it snowing? ", "Yes or No")
+    x = prompt("Is it snowing? ", "yes or no")
     //asks if it's snowing to signify whether the user feels stuck or suffocated and needs somewhere to stay
     if (x=="yes") {
-        y = prompt("Do you need somewhere to stay the night? ", "Yes or No")
+        y = prompt("Do you need somewhere to stay the night? ", "yes or no")
         if (y=="yes") {
             window.location.assign(webs[4]);
         }
@@ -198,15 +198,15 @@ function snowy() {
 }
 
 function windy() {
-    x = prompt("Is it windy? ", "Yes, No, Maybe")
+    x = prompt("Is it windy? ", "yes, no, maybe")
     //asks if it's windy to signify whether the user feels like they're victim of domestic abuse, but aren't sure
     if (x=="yes") {
-        let y = prompt("Do you know how strong the winds are? ", "Yes, No, Maybe")
+        let y = prompt("Do you know how strong the winds are? ", "yes, no, maybe")
         if (y=="yes") {
             alert("Make sure you get the right resources to combat your winds.")
         }
         else if (y=="maybe" || y=="no") {
-            let z = prompt("Do you want some help to gage the strength of your winds? ", "Yes or No")
+            let z = prompt("Do you want some help to gage the strength of your winds? ", "yes or no")
             if (z=="yes") {
                 window.location.assign(webs[5]);
             }
@@ -216,7 +216,7 @@ function windy() {
         }
     }
     else if (x=="maybe") {
-        let z = prompt("Do you want some help to figure out if it's windy? ", "Yes or No")
+        let z = prompt("Do you want some help to figure out if it's windy? ", "yes or no")
             if (z=="yes") {
                 window.location.assign(webs[5]);
             }
