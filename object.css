@@ -1,0 +1,55 @@
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    left: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS9lNlUwi_ycgp3ObPpNKz36PQ8KVyjTrNz02hucTxSKlHzGdy&usqp=CAU');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.right {
+    right: 0;
+    background-image: url('https://media.istockphoto.com/vectors/book-flat-icon-vector-id901558740?k=6&m=901558740&s=612x612&w=0&h=LY3IYTzhqNtnajxPItdX_UccvojCNZ0oj44MDRU8XdI=');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 12px;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+#del, #dele {
+    font-size: 30px;
+    font-family: fantasy;
+    font-weight: bold;
+    background-color: rgb(252, 248, 248, 0.8);
+}
+
+div {
+}
+
+#del {
+    display: flex;
+    flex-direction:column;
+}

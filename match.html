@@ -1,0 +1,171 @@
+<html>
+<head>
+<style>
+div#board{
+    background: #CCC;
+    border:#999 1px solid;
+    width: 800px;
+    height: 600px;
+    padding: 25px;
+    margin: 0px auto;
+}
+div#board > div{
+    background: url("https://cdn4.vectorstock.com/i/1000x1000/53/08/cute-cartoon-question-mark-vector-24095308.jpg") no-repeat;
+    border: #000 1px solid;
+    width: 138px;
+    height: 138px;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    font-size: 60px;
+    cursor: pointer;
+    text-align: center;
+    background-size: cover;
+}
+img{
+    width: 138px;
+    height: 138px;
+    background-size: cover;
+}
+
+</style>
+
+<script>
+x = 0;
+
+var cart = [{
+        name: "bunny",
+        img: "url(https://www.pngitem.com/pimgs/m/338-3384122_easter-png-pinterest-clip-bunny-clipart-transparent-background.png)",
+    },{
+        name: "bunny",
+        img: "url(https://www.pngitem.com/pimgs/m/338-3384122_easter-png-pinterest-clip-bunny-clipart-transparent-background.png)",
+    },
+    {
+        name: "giraffe",
+        img: "url(https://lh3.googleusercontent.com/proxy/WVFJSnISFmprcgcUjhD77kzDl09_pUFV2Bnw5YhqBZJvfgSEqo78cUeula7BqPf--72Octjp6ET8RIWLTAwHbjT8ATrWN0dztWiO5mL5Cv55DSp2DL27PgC1bToxDsjrkQ21GKxOp1gHIWNJ)",
+    },
+    {
+        name: "giraffe",
+        img: "url(https://lh3.googleusercontent.com/proxy/WVFJSnISFmprcgcUjhD77kzDl09_pUFV2Bnw5YhqBZJvfgSEqo78cUeula7BqPf--72Octjp6ET8RIWLTAwHbjT8ATrWN0dztWiO5mL5Cv55DSp2DL27PgC1bToxDsjrkQ21GKxOp1gHIWNJ)",
+    },
+    {
+        name: "otter",
+        img: "url(https://en.pimg.jp/060/984/075/1/60984075.jpg)",
+    },
+    {
+        name: "otter",
+        img: "url(https://en.pimg.jp/060/984/075/1/60984075.jpg)",
+    },
+    {
+        name: "dragon",
+        img: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQh4JtahutobYZX6upykT29-FhRies7ZZZoM8BPyK_glqEauO4u&usqp=CAU)",
+    },
+    {
+        name: "dragon",
+        img: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQh4JtahutobYZX6upykT29-FhRies7ZZZoM8BPyK_glqEauO4u&usqp=CAU)",
+    },
+    {
+        name: "narwhal",
+        img: "url(https://media.istockphoto.com/vectors/cute-cartoon-narwhal-vector-id845715252?k=6&m=845715252&s=612x612&w=0&h=uu4V6EwvrrE257XN-Ts0PbSokDcTrqix8zbyz4OQZDM=)",
+    },
+    {
+        name: "narwhal",
+        img: "url(https://media.istockphoto.com/vectors/cute-cartoon-narwhal-vector-id845715252?k=6&m=845715252&s=612x612&w=0&h=uu4V6EwvrrE257XN-Ts0PbSokDcTrqix8zbyz4OQZDM=)",
+    }];
+
+var cards = []
+var value = [];
+var card_ids = [];
+var flipped = 0;
+var result = 0;
+
+function sets(params) {
+    let x = Number(prompt("Pick a number between 1 and 5: "));
+    x*=2
+    console.log(x);
+    for (let i = 0; i < x; i++) {
+        cards.push(cart[i])
+    }
+    Array.prototype.shuffle = function() {
+    var i = cards.length, j, temp;
+    while(--i>0){
+        j = Math.floor(Math.random() * (i+1));
+        temp = cards[j]
+        cards[j] = cards[i];
+        cards[i] = temp;
+    }
+
+}
+}
+
+sets();
+
+
+function newBoard(params) {
+    flipped = 0;
+    var output = '';
+    cards.shuffle();
+    for (var i = 0; i < cards.length; i++) {
+        output += '<div id="card_'+i+'" onclick="memoryFlipcard(this,\''+cards[i].img+'\')"></div>';  
+    }
+    document.getElementById('board').innerHTML = output;
+}
+function memoryFlipcard(card,val) {
+    if(card.innerHTML == "" && value.length<2) {
+        card.style.background = val;
+        card.style.backgroundSize = 'cover';
+        console.log(val);
+        if(value.length==0) {
+            value.push(val);
+            card_ids.push(card.id);}
+            else if (value.length==1) {
+                value.push(val);
+                card_ids.push(card.id);
+                if(value[0]==value[1]) {
+                    flipped +=2;
+                    result = result+1
+                    document.getElementById('res').innerHTML = result;
+                    value = [];
+                    card_ids = [];
+                    if(flipped == cards.length) {
+                        setTimeout(reload, 700);
+                        function reload(params) {
+                            alert("Good job! Board cleared... generating new board");
+                            document.getElementById('board').innerHTML = '';
+                            result = 0;
+                            document.getElementById('res').innerHTML = result
+                            cards = []
+                            sets();
+                            newBoard();
+                        }  
+                }
+            }
+            else {
+                function flip2Back(params) {
+                    var card_1 = document.getElementById(card_ids[0]);
+                    var card_2 = document.getElementById(card_ids[1]);
+                    card_1.style.background = 'url(https://cdn4.vectorstock.com/i/1000x1000/53/08/cute-cartoon-question-mark-vector-24095308.jpg) no-repeat';
+                    card_1.style.backgroundSize = 'cover';
+                    card_2.style.background = 'url(https://cdn4.vectorstock.com/i/1000x1000/53/08/cute-cartoon-question-mark-vector-24095308.jpg) no-repeat';
+                    card_2.style.backgroundSize = 'cover';
+                    value = [];
+                    card_ids = [];
+                }
+            setTimeout(flip2Back,700)
+            }
+        }
+    }
+}
+</script>
+
+</head>
+<body>
+<div style="text-align: center; font-family: cursive; line-height: 10px; padding-top: 2.5px;">
+    <h1 style="font-size: 50px;">Match the Cards!</h1>
+    <h2>Result: </h2>
+    <h1 id="res">0</h1>
+</div>
+<div id="board"></div>
+<script>newBoard()</script>
+</body>
+</html

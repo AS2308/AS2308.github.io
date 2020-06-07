@@ -1,0 +1,26 @@
+<html>
+
+<script>
+var cam = ["a-bc", "-d-ef", "g-hi"];
+
+cam.forEach(camel);
+
+function camel(item, index) {
+    let x = item.split("-");
+    //console.log(x);
+    for (let i = 0; i < x.length; i++) {
+        if (i>0) {
+            x[i] = x[i].toUpperCase();
+            //x[i].style.textTransform = "capitalize";
+            var z = x.join();
+            var a = z.replace(/,/g,"");
+            console.log(a);
+        }
+    }
+}
+
+camel();
+
+</script>
+
+</html>

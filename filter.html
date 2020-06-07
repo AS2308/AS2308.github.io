@@ -1,0 +1,52 @@
+<html>
+
+<button onclick="fr()">Filter</button>
+<button onclick="frip()">Filter In Place</button>
+<p id="original">Original: 2,4,9,3,5</p>
+<p id="filrange"></p>
+<p id="plrange"></p>
+
+<script>
+
+function filterRange(arr, a, b) {
+  return arr.filter(item => (a <= item && item <= b));
+}
+
+function fr() {
+    let arr = [2, 4, 9, 3, 5];
+    let filtered = filterRange(arr, 2, 4);
+    document.getElementById('filrange').innerHTML = "Filtered: " + filtered;
+}
+
+function filterRangeInPlace(arr, a, b) {
+    return arr.filter(item => (a <= item && item <= b));
+}
+
+function frip() {
+    let arr = [2, 4, 9, 3, 5];
+    let fil = filterRangeInPlace(arr, 2, 4);
+    console.log(fil);
+    for (let i = 0; i < arr.length; i++) {
+    }      
+  
+}
+
+function filterRangeInPlace(arr, a, b) {
+    for (let i = 0; i < arr.length; i++) {
+      let x = arr[i];
+      if (x < a || x > b) {
+        arr.splice(i, 1);
+      }
+    }
+}
+
+function frip() {
+  let arr = [2, 4, 9, 3, 5];
+  filterRangeInPlace(arr, 2, 4); 
+  document.getElementById('plrange').innerHTML = "Filtered in Place: " + arr;
+
+}
+
+</script>
+
+</html>

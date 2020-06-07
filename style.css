@@ -4,20 +4,21 @@ button {
     font-family: 'Caesar Dressing';
     border: none;
     width: 24.5%;
-    background-color: transparent;
+    background-color: rgb(170, 213, 228, 0.65); 
 }
 
 button:hover {
     box-shadow: 5px 5px 5px 5px;
-    font-size: 60px;
 }
 
 body {
-    background-image: url('https://i.pinimg.com/originals/76/ec/a8/76eca8e9e408283e32823b736e19c966.gif');
+    height: 100%;
     background-size: cover;
     animation-name: intro;
     animation-duration: 3s;
     animation-timing-function: ease-out;
+    background-image: url('https://i.pinimg.com/originals/76/ec/a8/76eca8e9e408283e32823b736e19c966.gif');
+
   }
   
 @keyframes intro {
@@ -31,6 +32,7 @@ body {
     top: 20px;
     background-color: transparent;
     width: 100%;
+    padding: 0px;
 }
 
 #me {
@@ -46,7 +48,7 @@ body {
 #home {
     border: 3px solid rgb(214, 173, 230);
     position: relative;
-    top: 125px;
+    top: 150px;
     width: 100%;
     text-align: center;
     background-color: transparent;
@@ -59,14 +61,9 @@ body {
     width: 100%;
     display: inline-block;
     animation-name: grow;
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-delay: 2s;
     animation-iteration-count: 3;
-}
-
-@keyframes grow {
-    from {padding-top: 50px;}
-    to {padding-top: 30px;}
 }
 
 span {
@@ -83,3 +80,17 @@ span {
     height: fit-content;
     background-color: rgb(252, 249, 249, 0.45); 
 }
+.bg-image {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.family {
+    background-image: url('https://i.pinimg.com/600x315/bf/9d/b0/bf9db04ccdb37678eb60440911e8564a.jpg');
+    background-size: 50%;
+    background-position: center;
+}
+
+.music {background-image: url('https://cliparting.com/wp-content/uploads/2016/06/Music-clip-art-notes-free-clipart-images-2.jpg');}
+.bake {background-image: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/579127/910/607/m1/fpnw/wm0/grandmasgardenbakinginthekitchen_package-6-.jpg?1437774032&s=f5ad7eddc98169e9095320e30bc388e8');}

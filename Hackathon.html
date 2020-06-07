@@ -1,0 +1,237 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title>The Weather Network</title>
+
+<div class="weather">
+    <img src="https://image.freepik.com/free-vector/weather-template-app-simple-style_23-2147552560.jpg" style="width: 100%; height: auto;">
+    <div class="content" onresize="size()">
+        <h1 onclick="escape()">WEATHER</h1>
+        <img src="https://cdn0.microscopesinternational.com/images/weather/v2/@224/day/cloudy.gif" id="partcloud">
+        <button id="sun" onclick="sunny()"></button>
+        <button id="cloud" onclick="cloudy()"></button>
+        <button id="rain" onclick="rainy()"></button>
+        <button id="storm" onclick="stormy()"></button>
+        <button id="snow" onclick="snowy()"></button>
+        <button id="wind" onclick="windy()"></button>
+        <button id="esc" onclick="escape()">Click to see real-time news!</button>
+
+    </div>
+</div>
+
+
+
+<style>
+body {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.weather {
+    position: relative;
+    margin-top: 0%;
+}
+
+.content {
+    position: absolute;
+    top: 0vw;
+    color: white;
+}
+
+h1 {
+    color: rgb(248, 180, 54);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 0vw;
+    left: 26.5vw;
+    text-align: center;
+    font-size: 7vw;
+    background-color: white;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    top: 73vw;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    padding-right: 3.5vw;
+    padding-left: 3.5vw;
+    margin-right: 4.8vw;
+    left: 16.5vw;
+}
+
+#partcloud {
+    position: absolute;
+    top: 11.5vw;
+    left: 23vw;
+    width: 70%;
+    height: 57vw;
+}
+
+#esc {
+    position: absolute;
+    border-color: transparent;
+    background-color: rgb(2, 145, 145);
+    top: 93.4vw;
+    left: 32vw;
+    font-size: 2.5vw;
+    font-family: monospace;
+    padding: unset;
+}
+
+</style>
+
+<script>
+
+//create an array with links for different issues
+var webs = [
+    "https://www.thehotline.org/help/path-to-safety/", 
+    //sun; sends the user to a website with advice and planning strategies 
+    "https://unsafeathomeottawa.ca/",
+    //cloud; sends the user to an online support group
+    "http://www.beachpsych.com/pages/cc59.html",
+    //rain; sends to user to a "do's and don'ts" website
+    "https://www.911.gov/needtocallortext911.html",
+    //storm; sends the user to a 911 resource website in cases of extreme danger
+    "https://www.sheltersafe.ca/",
+    //snow; provides shelters for women in abusive situation
+    "https://www.helpguide.org/articles/abuse/domestic-violence-and-abuse.htm",
+    //wind; provides signs of domestic abuse
+    "https://www.theweathernetwork.com/ca"
+    //escape; takes the user to an actual weather website in case they need a quick cover
+]
+
+function sunny() {
+    x = prompt("Do you need sunscreen? ", "Yes or No")
+    //asks if they need sunscreen to signify advice or protection
+    if (x == "yes") {
+        y = prompt("Do you want sunscreen?")
+        if (y== "yes") {
+            window.location.assign(webs[0]);
+        }
+        else {
+        alert("Let us know if you need sunscreen later.")   
+    }
+    } else {
+        alert("Let us know if you need sunscreen later.")   
+    }
+}
+
+function cloudy() {
+    x = prompt("Is it starting to look cloudy? ", "Yes, No, Maybe")
+    //asks if it looks cloudy to signify whether the user is starting to see a problem
+    if (x == "yes" || "maybe") {
+        var y = prompt("Do you want some advice for cloudy weather? ", "Yes or No");
+        if (y== "yes") {
+            window.location.assign(webs[1]);
+        }
+        else {
+        alert("Come back later if you do :)")   
+    }
+    } else {
+        alert("Let us know if it gets cloudy later.")   
+    }
+}
+
+function rainy() {
+    x = prompt("Does it look like it's going to rain? ", "Yes, No, Maybe")
+    //asks if it's going to rain to signify whether there will be a need for advice in the case that it does
+    if (x=="yes" || x=="maybe") {
+        y= prompt("Do you want an umbrella for later? ", "Yes or No");
+        if (y=="yes") {
+            window.location.assign(webs[2]);
+        }
+        else {
+            alert("Let us know if you want one later.");
+        }
+    }
+    else {
+        alert("Keep an eye on the weather and let us known if it changes later.")
+    }
+}
+
+function stormy() {
+    x = prompt("Is there a storm? ", "Yes or No")
+    //asks if there's a storm to signify whether their abuser is getting violet and if they're in danger
+    if (x=="yes") {
+        y = prompt("Do you think you'll be hit by lightning? ", "Yes, No, Maybe");
+        if (y=="yes") {
+            window.location.assign(webs[3]);
+        }
+        else if (y=="maybe") {
+            let z = prompt("Would you still like to take shelter?", "Yes, No")
+            if (z=="yes") {
+                window.location.assign(webs[3]);
+            }
+            else {
+                alert("Make sure you stay safe.");
+            }
+        }
+    }
+    else {
+            alert("Be watchful and let us know if it starts to get stormy.")
+        }
+}
+
+function snowy() {
+    x = prompt("Is it snowing? ", "Yes or No")
+    //asks if it's snowing to signify whether the user feels stuck or suffocated and needs somewhere to stay
+    if (x=="yes") {
+        y = prompt("Do you need somewhere to stay the night? ", "Yes or No")
+        if (y=="yes") {
+            window.location.assign(webs[4]);
+        }
+        else {
+            alert("Come back later if you do.");
+        }
+    }
+    else {
+        alert("Come back later if it starts snowing.")
+    }
+}
+
+function windy() {
+    x = prompt("Is it windy? ", "Yes, No, Maybe")
+    //asks if it's windy to signify whether the user feels like they're victim of domestic abuse, but aren't sure
+    if (x=="yes") {
+        let y = prompt("Do you know how strong the winds are? ", "Yes, No, Maybe")
+        if (y=="yes") {
+            alert("Make sure you get the right resources to combat your winds.")
+        }
+        else if (y=="maybe" || y=="no") {
+            let z = prompt("Do you want some help to gage the strength of your winds? ", "Yes or No")
+            if (z=="yes") {
+                window.location.assign(webs[5]);
+            }
+            else {
+                alert("Come back later if you do.")
+            }
+        }
+    }
+    else if (x=="maybe") {
+        let z = prompt("Do you want some help to figure out if it's windy? ", "Yes or No")
+            if (z=="yes") {
+                window.location.assign(webs[5]);
+            }
+            else {
+                alert("Come back later if you do.")
+            }
+    }
+    else {
+        alert("Come back later if it gets windy.");
+    }
+}
+
+function escape(params) {
+    window.location.assign(webs[6]);
+}
+</script>
+
+</html>

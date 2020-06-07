@@ -1,0 +1,42 @@
+<html>
+<body onload="func()">
+<p id="pa"></p>
+
+<script>
+var a = new Array;
+var x = {
+  city: "",
+  street: "",
+  housenum: "",
+  yrs: ""
+};
+
+function func(params) {
+    x.city=Number(prompt("enter your city"));
+    x.street=Number(prompt("enter your street"));
+    x.housenum=Number(prompt("enter your house number"));
+    x.yrs=Number(prompt("enter number of years lived at that house"));
+    var z;
+    for (z in x) {
+        switch(y=Number.isInteger(x[z])) {
+            case y=true:
+                x[z]=x[z]*2
+                break
+            case y=false:
+                //let b = (x[z]);
+                //console.log(b);
+                //String(b);
+                //console.log(b);
+                console.log("not a number");
+        }
+        var myArray = Object.values(x);
+        //document.getElementById("pa").innerHTML = myArray;
+    }
+
+}
+
+
+</script>
+
+</body>
+</html>
