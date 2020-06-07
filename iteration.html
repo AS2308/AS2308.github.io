@@ -1,0 +1,49 @@
+<html>
+
+<script>
+
+let colours = {
+  red: 1,
+  green: 4,
+  brown: 8,
+  yellow: 3,
+  violet: 7,
+  pink: 10,
+};
+
+var rainbow = []
+
+colours[Symbol.iterator] = rain();
+
+function rain(params) {
+    return {
+        current: this.red,
+        last: this.to,
+    }
+    x = colours.red;
+    console.log(x);
+    if (colours.red <= 7) {
+        rainbow.push(x);
+        return {value: colours.red++}
+    }
+
+    //console.log("HEY");
+    //return {
+        //current: this.red,
+    //next() {
+      //if (this.current <= 7) {
+        //rainbow.push(this.current);
+        //return {value: this.current++};
+      //} else {
+        //console.log("not in rainbow");
+      //}
+    //}
+  //}
+  //console.log(this.current);
+}
+   
+
+
+</script>
+
+</html>
