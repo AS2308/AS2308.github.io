@@ -127,7 +127,7 @@ function sunny() {
 function cloudy() {
     x = prompt("Is it starting to look cloudy? ", "yes, no, maybe")
     //asks if it looks cloudy to signify whether the user is starting to see a problem
-    if (x == "yes" || "maybe") {
+    if (x == "yes" || x == "maybe") {
         var y = prompt("Do you want some advice for cloudy weather? ", "yes or no");
         if (y== "yes") {
             window.location.assign(webs[1]);
